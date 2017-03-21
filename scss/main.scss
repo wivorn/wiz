@@ -1,0 +1,208 @@
+$red: #EC1A3A;
+$blue: #005996;
+$green: #00A85C;
+$yellow: #FFF100;
+$navBarHeight: 60px;
+
+@font-face {
+  font-family: 'thaisansneue';
+  src: url('../fonts/thaisansneue-bold-webfont.woff2') format('woff2'),
+       url('../fonts/thaisansneue-bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'thaisansneue';
+  src: url('../fonts/thaisansneue-regular-webfont.woff2') format('woff2'),
+       url('../fonts/thaisansneue-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+	-webkit-font-smoothing: antialiased;
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+}
+
+body {
+	padding-top: $navBarHeight;
+	background: #111111;
+	color: white;
+}
+
+h2 {
+	font-size: 36px;
+	font-weight: bold;
+	margin-bottom: 24px;
+}
+
+p {
+	font-size: 20px;
+	line-height: 1.5;
+}
+
+.thai {
+	font-family: 'Sukhumvit Set', 'thaisansneue', sans-serif;
+}
+
+section {
+	padding: 48px 0;
+}
+
+.navbar {
+	background: rgba(17,17,17,0.9);
+	height: $navBarHeight;
+	border-bottom: 0;
+
+	.navbar-brand {
+		height: 100%;
+		padding: 10px;
+	}
+
+	.navbar-logo {
+		height: 40px;
+	}
+
+	.navbar-form {
+		margin: 0;
+	}
+
+	a {
+		text-transform: uppercase;
+		letter-spacing: 1.5px;
+		display: inline-block;
+		line-height: $navBarHeight;
+		color: white;
+		margin: 0;
+		padding: 0 15px;
+		transition: color .3s;
+
+		&:hover, &:focus {
+			text-decoration: none;
+			color: $red;
+		}
+
+		&.red {
+			background: $red;
+
+			&:hover {
+				color: white;
+			}
+		}
+	}
+}
+
+.jumbotron {
+	background-image: url('../img/nebula.jpg');
+	background-size: cover;
+	background-position: center center;
+	color: white;
+	margin: 0;
+	padding: 100px 0;
+
+	.header-logo {
+		width: 190px;
+	}
+
+	h1 {
+		font-size: 36px;
+		font-weight: bold;
+	}
+
+	.button {
+		display: inline-block;
+		margin-top: 36px
+	}
+
+	.wiz-card {
+		width: 100%;
+		max-width: 550px;
+	}
+}
+
+.button {
+	background: $red;
+	color: white;
+	padding: 10px 20px;
+	font-size: 18px;
+	border-radius: 5px;
+	text-decoration: none;
+
+	&:hover, &:focus {
+		color: white;
+		text-decoration: none;
+	}
+}
+
+#about {
+	text-align: center;
+
+	.title-logo {
+		margin-top: -20px;
+		margin-right: 15px;
+	}
+
+	p {
+		max-width: 700px;
+		margin: 0 auto 24px;
+	}
+
+	.tag {
+		display: inline-block;
+		padding: 10px;
+		border-radius: 5px;
+		background: $green;
+		text-align: center;
+		width: 100px;
+
+		& + .tag {
+			margin-left: 10px;
+		}
+
+		.large {
+			font-weight: bold;
+			font-size: 24px;
+		}
+
+		.small {
+			font-size: 16px;
+		}
+	}
+}
+
+#how-to-play {
+	background: #222;
+
+	h1 {
+		text-align: center;
+		font-weight: bold;
+	}
+
+	h2 {
+		text-align: center;
+		font-size: 24px;
+		font-weight: normal;
+
+		&:after {
+			content: '';
+			display: block;
+			width: 50px;
+			height: 4px;
+			background: $red;
+			margin: 20px auto;
+		}
+	}
+}
+
+footer {
+	text-align: center;
+	padding: 24px 0;
+}
+
+@media (min-width: 1200px) {
+	.container {
+		width: 1024px;
+	}
+}
